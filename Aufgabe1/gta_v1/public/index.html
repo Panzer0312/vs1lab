@@ -23,31 +23,22 @@
 
     <main class="main">
         <section class="main__tagging tagging">
-            <h2>Tagging</h2>
-
+            <h1>Tagging</h1>
             <!-- ############### VS1Lab 1a Form 1 Start -->
-            <p>Add a new GeoTag</p>
             <form id="tag-form" action="/tagging" method="post">
 
                 <!-- ... your code here ... -->
-                <div style="width: 300px;border: 1px solid #000">
-                    <div>
-                        <label for="lat_text" >Latitude:</label>
-                        <input type="text" name="lat_input" placeholder="lat" required>
-                    </div>
-                    <div>
-                        <label for="long_text" >Longitude:</label>
-                        <input type="text" name="long_input" placeholder="long" required>
-                    </div>
-                    <div>
-                        <label for="name_text" >Name:</label>
-                        <input type="text" name="name_input" placeholder="e.g. Central Berlin" required>
-                    </div>
-                    <div>
-                        <label for="hashtag_text" >Hashtag:</label>
-                        <input type="text" name="hashtag_input" placeholder="e.g. #ber" required>
-                    </div>     
-                </div>
+                <fieldset>
+                    <legend>Add a new GeoTag</legend>
+                    <label for="lat_text" >Latitude:</label> <br>
+                    <input type="text" name="lat_input" placeholder="lat" required> <br>
+                    <label for="long_text" >Longitude:</label> <br>
+                    <input type="text" name="long_input" placeholder="long" required> <br>
+                    <label for="name_text" >Name:</label> <br>
+                    <input type="text" name="name_input" placeholder="e.g. Central Berlin" required> <br>
+                    <label for="hashtag_text" >Hashtag:</label> <br>
+                    <input type="text" name="hashtag_input" placeholder="e.g. #ber" required> <br>
+                </fieldset>
             </form>
             <!-- ############### VS1Lab 1a Form 1 End -->
 
@@ -60,7 +51,11 @@
             <form class="discovery__search" id="discoveryFilterForm" action="/discovery" method="post">
 
                 <!-- ... your code here ... -->
-
+                <fieldset>
+                <legend>Search</legend>
+                <label for="search">Searchterm or Keyword</label> <br>
+                <input type="text" name="search_term" placeholder="e.g. Berlin" required>
+                </fieldset>
             </form>
             <!-- ############### VS1Lab 1a Form 2 End -->
 
