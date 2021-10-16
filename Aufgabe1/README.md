@@ -164,8 +164,8 @@ Zur Übersicht folgen noch mal alle Anforderungen in kompakter Form als Checklis
 
 ### Teil A: Formulare fertigstellen
 
-- [ ] `Input` Elemente im Tagging- und Discovery-Formular ergänzen
-  - [ ] Felder im Tagging Formular: `latitude`, `longitude`, `name` und `hashtag`
+- [ x] `Input` Elemente im Tagging- und Discovery-Formular ergänzen
+  - [x ] Felder im Tagging Formular: `latitude`, `longitude`, `name` und `hashtag`
   - [ ] Felder im Discovery Formular: `searchterm` sowie `latitude` und `longitude` als versteckte Eingaben
   - [ ] Eindeutige `id` Attribute für die Felder
   - [ ] Für alle Felder jeweils ein `label`
@@ -182,12 +182,12 @@ Zur Übersicht folgen noch mal alle Anforderungen in kompakter Form als Checklis
 
 - [ X] Layout als verschachteltes zweispaltiges Grid realisieren
   - [ ] Klassen `.row` und `.col-x` verwenden
-- [ ] Seitengestaltung
+- [ x] Seitengestaltung
   - [ x] Farbig abgesetzte Header- und Footer-Bereiche
   - [ x] Vertikale Anordnung der Eingaben im Tagging Formular
   - [ x] Größere Boxen für die Eingaben aller Formulare
   - [ x] Discovery Ergebnisliste mit farbigen Boxen
-- [ ] Responsives Verhalten
-  - [ ] Spalten relativ zur Bildschirmbreite anpassen
-  - [ ] Ab min. Bildschirmbreite Spalten untereinander klappen
-    - [ ] Mit Media Query realisieren 
+- [x ] Responsives Verhalten
+  - [x ] Spalten relativ zur Bildschirmbreite anpassen
+  - [ x] Ab min. Bildschirmbreite Spalten untereinander klappen
+    - [x ] Mit Media Query realisieren 
