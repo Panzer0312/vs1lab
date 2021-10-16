@@ -106,9 +106,47 @@ a {
   width: calc(100% - 1rem);
 }
 
+.main{
+  position: relative;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 33% 67%;
+}
+
+
+.main__tagging{
+  background-color: red;
+  grid-column: 1;
+}
+
+.main__discovery{
+  background-color: lightcoral;
+  grid-column: 2;
+}
 
 /* ### TODO ### Styles for Header Component */
-
+.header{
+  display: grid;
+  grid-template-columns: 5% 75% 20%;
+  border-bottom: 2px solid gray;
+  background-color: gray;
+  height: 100px;
+  margin-bottom: 50px;
+}
+.header__image{
+  grid-column: 1;
+  margin: auto;
+  
+}
+.header__title{
+  grid-column: 2;
+  align-items: center;
+  margin: auto;
+}
+.header__navigation{
+  grid-column: 3;
+  margin: auto;
+}
 /* ... your code here ... */
 
 
@@ -128,7 +166,12 @@ a {
 
 
 /* ### TODO ### Styles for Footer Component */
-
+.footer{
+  margin-top: 50px;
+  padding: 20px 0px 0px 10px;
+  height: 60px;
+  background-color: gray;
+}
 /* ... your code here ... */
 
 
