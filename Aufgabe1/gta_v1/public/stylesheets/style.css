@@ -109,22 +109,25 @@ a {
 .main{
   position: relative;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 30px;
   grid-template-columns: 33% 67%;
 }
 
 
 .main__tagging{
-  background-color: red;
   grid-column: 1;
 }
 
 .main__discovery{
-  background-color: lightcoral;
   grid-column: 2;
 }
 
 /* ### TODO ### Styles for Header Component */
+.site{
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+}
+
 .header{
   display: grid;
   grid-template-columns: 5% 75% 20%;
@@ -158,10 +161,38 @@ a {
 /* ### TODO ### Styles for Tagging component */
 
 /* ... your code here ... */
+input{
+  width: 300px;
+  height: 40px;
+}
 
 
 /* ### TODO ### Styles for Discovery component */
+.discovery__wrapper{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 10px;
+  margin-top: 40px;
+}
 
+li {
+  list-style-type: none;
+  background-color: darkgray;
+  border: 2px solid gray;
+  color: blue;
+  margin-bottom: 5px;
+  height: 60px;
+  width: 200px;
+  
+}
+/*
+.discoveryResults{
+  
+}
+
+/**.discovery__map{
+
+}
 /* ... your code here ... */
 
 
@@ -178,3 +209,15 @@ a {
 /* ### TODO ### Media Queries */
 
 /* ... your code here ... */
+@media (max-width: 900px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main__tagging{
+    
+  }
+  .main__discovery{
+    
+  }
+}
