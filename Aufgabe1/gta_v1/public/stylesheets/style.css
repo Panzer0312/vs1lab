@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
   background-color: black;
   color:rgb(232, 230, 227);
 }
@@ -108,6 +109,7 @@ a {
   width: calc(100% - 1rem);
 }
 
+/* ### TODO ### Styles for Main Component */
 .main{
   display: flex;
   margin-left: 15px;
@@ -117,20 +119,58 @@ a {
 }
 
 
+input{
+  width: 250px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: rgb(25, 25, 25);
+  color:rgb(232, 230, 227);
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #ffa31a;
+}
+
+fieldset{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  border-color: #ffa31a;
+}
+ 
+/* ### TODO ### Styles for Tagging Component */
 .main__tagging{
   display: flex;
   flex-direction: column;
   
 }
 
+/* ### TODO ### Styles for Discovery Component */
 .main__discovery{
   display: flex;
   flex-direction: column;
 }
 
+.discovery__wrapper{
+  margin-top : 25px;
+  display: flex;
+  gap: 10px;
+}
+
+li {
+  list-style-type: none;
+  background-color: #462e0b ;
+  border-radius: 10px;
+  border: 2px solid rgb(49, 31, 4);
+  margin-bottom: 5px;
+  height: 60px;
+  width: 200px;
+  padding: 10px;
+}
+
 
 /* ### TODO ### Styles for Header Component */
-
 .header{
   display: grid;
   grid-template-columns: 5% 75% 15%;
@@ -153,68 +193,12 @@ a {
   grid-column: 3;
   margin: auto;
 }
-/* ... your code here ... */
 
-
-/* ### TODO ### Styles for Main Component */
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Tagging component */
-
-/* ... your code here ... */
-input{
-  width: 250px;
-  height: 40px;
-  margin-bottom: 10px;
-  background-color: rgb(25, 25, 25);
-  color:rgb(232, 230, 227);
-  border-width: 1px;
-  border-radius: 10px;
-  border-color: #ffa31a;
+a {
+  color: #ffa31a
 }
 
-fieldset{
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  border-radius: 10px;
-  border-color: #ffa31a;
-}
-/* ### TODO ### Styles for Discovery component */
-.discovery__wrapper{
-  margin-top : 25px;
-  display: flex;
-  gap: 10px;
-}
-
-li {
-  list-style-type: none;
-  background-color: #462e0b ;
-  border-radius: 10px;
-  border: 2px solid rgb(49, 31, 4);
-  margin-bottom: 5px;
-  height: 60px;
-  width: 200px;
-  padding: 10px;
-}
-
-/* ... your code here ... */
-
-
-/* ### TODO ### Styles for Footer Component */
-.footer{
-  flex-flow: column-reverse;
-  margin-top: auto;
-  padding: 20px 0px 0px 10px;
-  height: 60px;
-  background-color: rgb(32, 29, 29);
-
-}
-/* ... your code here ... */
-
+/*Additional Dark Mode Configurations*/
 .Textbox{
   background-color:rgb(25, 25, 25);
   border-color: rgb(25, 25, 25);
@@ -228,20 +212,21 @@ li {
   color:rgb(232, 230, 227);
 }
 
-
-
 input:hover{
   background-color: rgb(75, 75, 75);
 }
 
-a {
-  color: #ffa31a
+/* ### TODO ### Styles for Footer Component */
+.footer{
+  flex-flow: column-reverse;
+  margin-top: auto;
+  padding: 20px 0px 0px 10px;
+  height: 60px;
+  background-color: rgb(32, 29, 29);
+
 }
 
-
 /* ### TODO ### Media Queries */
-
-/* ... your code here ... */
 @media (max-width: 1000px) {
   .main {
     display: flex;
