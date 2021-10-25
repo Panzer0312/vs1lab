@@ -28,6 +28,7 @@ html {
   --border-color: #ffa31a;
 
   --text-color:rgb(232, 230, 227);
+  --text-color-invalid:#d43c21;
   --text-bg-color: rgb(25, 25, 25);
   --text-bg-color-disabled:rgb(56, 56, 56);
 
@@ -209,6 +210,9 @@ input:hover{
 
 input:disabled{
   background-color: var(--text-bg-color-disabled);
+}
+input:invalid{
+  color: var(--text-color-invalid);
 }
 
 /* ### TODO ### Styles for Footer Component */

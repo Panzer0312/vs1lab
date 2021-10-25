@@ -34,9 +34,9 @@
                     <label for="long_text" >Longitude:</label> 
                     <input type="text" name="long_input" placeholder=" long"  disabled> 
                     <label for="name_text" >Name:</label> 
-                    <input type="text" id="name_input" pattern="#\[a-zA-Z]*" placeholder=" e.g. Central Berlin" maxlength="11" required>  
+                    <input type="text" id="name_input" pattern="([A-Z])([a-z])+" placeholder=" e.g. Central Berlin" maxlength="10" required>  
                     <label for="hashtag_text" >Hashtag:</label>
-                    <input type="text" id="hashtag_input" pattern="#[a-zA-Z]*" maxlength="11" placeholder=" e.g. #ber" required>
+                    <input type="text" id="hashtag_input" pattern="(#)\w+" maxlength="11" placeholder=" e.g. #ber" required>
                     <input type="submit" id="add_tag_button" value="Add Tag">
                 </fieldset>
             </form>
