@@ -34,7 +34,7 @@ html {
   --list-bg:#462e0b;
   --list-border:rgb(49, 31, 4);
 
-  --gray-color: rgb(75, 75, 75);
+  --hover-color: rgb(75, 75, 75);
 }
 
 
@@ -204,7 +204,7 @@ li {
 
 /*Additional Dark Mode Configurations*/
 input:hover{
-  background-color: var(--gray-color);
+  background-color: var(--hover-color);
 }
 
 input:disabled{
