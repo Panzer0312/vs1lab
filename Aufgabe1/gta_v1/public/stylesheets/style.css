@@ -24,10 +24,17 @@ html {
 /* Variables (example: see declaration for "a" below) */
 
 :root {
-  --link-color: #00B7FF;
-  --background-color: #efefef;
-  --border-color: #cdcdcd;
-  --gray-color: #666;
+  --background-color: black;
+  --border-color: #ffa31a;
+
+  --text-color:rgb(232, 230, 227);
+  --text-bg-color: rgb(25, 25, 25);
+  --text-bg-color-disabled:rgb(56, 56, 56);
+
+  --list-bg:#462e0b;
+  --list-border:rgb(49, 31, 4);
+
+  --gray-color: rgb(75, 75, 75);
 }
 
 
@@ -39,12 +46,12 @@ body {
   flex-direction: column;
   min-height: 100vh;
   
-  background-color: black;
-  color:rgb(232, 230, 227);
+  background-color: var(--background-color);
+  color:var(--text-color);
 }
 
 a {
-  color: var(--link-color);
+  color: var(--border-color);
 }
 
 /* ### TODO ### Styles for other HTML elements */
@@ -123,11 +130,11 @@ input{
   width: 250px;
   height: 40px;
   margin-bottom: 10px;
-  background-color: rgb(25, 25, 25);
-  color:rgb(232, 230, 227);
+  background-color: var(--text-bg-color);
+  color:var(--text-color);
   border-width: 1px;
   border-radius: 10px;
-  border-color: #ffa31a;
+  border-color: var(--border-color);
 }
 
 fieldset{
@@ -136,7 +143,7 @@ fieldset{
   flex-direction: column;
   gap: 5px;
   border-radius: 10px;
-  border-color: #ffa31a;
+  border-color: var(--border-color);
 }
  
 /* ### TODO ### Styles for Tagging Component */
@@ -160,9 +167,9 @@ fieldset{
 
 li {
   list-style-type: none;
-  background-color: #462e0b ;
+  background-color: var(--list-bg);
   border-radius: 10px;
-  border: 2px solid rgb(49, 31, 4);
+  border: 2px solid var(--list-border);
   margin-bottom: 5px;
   height: 60px;
   width: 200px;
@@ -174,7 +181,7 @@ li {
 .header{
   display: grid;
   grid-template-columns: 5% 75% 15%;
-  border: 2px solid #ffa31a;
+  border: 2px solid var(--border-color);
   border-radius: 15px;
   height: 100px;
   margin-bottom: 50px;
@@ -194,13 +201,14 @@ li {
   margin: auto;
 }
 
-a {
-  color: #ffa31a
-}
 
 /*Additional Dark Mode Configurations*/
 input:hover{
-  background-color: rgb(75, 75, 75);
+  background-color: var(--gray-color);
+}
+
+input:disabled{
+  background-color: var(--text-bg-color-disabled);
 }
 
 /* ### TODO ### Styles for Footer Component */
@@ -209,7 +217,7 @@ input:hover{
   margin-top: auto;
   padding: 20px 0px 0px 10px;
   height: 60px;
-  background-color: rgb(32, 29, 29);
+  background-color: var(--text-bg-color);
 
 }
 
