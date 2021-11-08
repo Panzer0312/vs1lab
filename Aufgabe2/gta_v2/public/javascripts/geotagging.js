@@ -37,7 +37,7 @@ class LocationHelper {
      */
     static findLocation(callback) {
         const geoLocationApi = navigator.geolocation;
-
+        console.log("test")
         if (!geoLocationApi) {
             throw new Error("The GeoLocation API is unavailable.");
         }
@@ -63,7 +63,7 @@ class LocationHelper {
  * A class to help using the MapQuest map service.
  */
 class MapManager {
-    #apiKey = '';
+    #apiKey = 'UNxtPk1IYOiMFhGJP6Fqf8bFMdLOyDXZ';
 
     /**
      * Create a new MapManager instance.
@@ -86,7 +86,6 @@ class MapManager {
             console.log("No API key provided.");
             return "images/mapview.jpg";
         }
-
         let tagList = `You,${latitude},${longitude}`;
         tagList += tags.reduce((acc, tag) => `${acc}|${tag.name},${tag.latitude},${tag.longitude}`, "");
 
@@ -103,8 +102,32 @@ class MapManager {
  * It is called once the page has been fully loaded.
  */
 // ... your code here ...
+function updateLocation (helper) {
+  document.getElementById("lat_input").value = helper.latitude;
+  document.getElementById("lat_input_hidden").value = helper.latitude;
+  document.getElementById("long_input").value = helper.longitude;
+  document.getElementById("long_input_hidden").value = helper.longitude;
+ 
+  mm = new MapManager('mTAajLz6sIamsAGNO3Fub5cEUdFRfTRH');
+  var mapView = document.getElementById("mapView");
+  var list = document.getElementById("discoveryResults").getElementsByTagName("li");
+  var tags = [];
+  for (var i = 0; i<list.length; i++){
+    var str = list[i].innerHTML.split(' ');
+    var name = str[0];
+    var lat = str[1].substring(1, str[1].length-1);
+    var long = str[2].substring(0, str[2].length-1);
+    var tag =  {
+        name: name,
+        latitude: parseFloat(lat),
+        longitude: parseFloat(long)
+    };
+    tags.push(tag);
+  }
+  mapView.src = mm.getMapUrl(helper.latitude, helper.longitude, tags, 13);
+}
 
 // Wait for the page to fully load its DOM content, then call updateLocation
 document.addEventListener("DOMContentLoaded", () => {
-    alert("Please change the script 'geotagging.js'");
+    LocationHelper.findLocation(updateLocation);
 });
